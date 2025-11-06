@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Website - Find Your Match</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MatriMate</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find Your Perfect Match</h1>
+            <p>Connect with compatible individuals for meaningful relationships</p>
+            <button class="btn btn-primary" onclick="scrollToSection('register')">Get Started</button>
+        </div>
+    </section>
+
+    <section id="register" class="auth-section">
+        <div class="container">
+            <h2>Create Your Profile</h2>
+            <form class="auth-form" id="registrationForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <input type="text" placeholder="City" required>
+                <input type="number" placeholder="Age" required>
+                <select required>
+                    <option>Select Religion</option>
+                    <option>Hindu</option>
+                    <option>Muslim</option>
+                    <option>Christian</option>
+                    <option>Other</option>
+                </select>
+                <button type="submit" class="btn btn-submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="login" class="auth-section">
+        <div class="container">
+            <h2>Login to Your Account</h2>
+            <form class="auth-form" id="loginForm">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <label><input type="checkbox"> Remember Me</label>
+                <button type="submit" class="btn btn-submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Search Matches</h2>
+            <div class="filter-panel">
+                <input type="number" placeholder="Age Range Min" min="18" max="70">
+                <input type="number" placeholder="Age Range Max" min="18" max="70">
+                <input type="text" placeholder="Location">
+                <button class="btn btn-search" onclick="searchMatches()">Search</button>
+            </div>
+            <div class="profiles-grid" id="profilesGrid">
+                <!-- Profiles will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MatriMate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
